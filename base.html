@@ -1,0 +1,64 @@
+<!doctype html>
+<html xmlns:wb="http://open.weibo.com/wb" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="wb:webmaster" content="a68853a0a10931a0" />
+
+    <title>{% block title %} {{site.title}} {% endblock %}</title>
+    <link rel="shortcut icon" href="/template/image/favicon.ico" type="image/x-icon">
+    
+    {% if site.configs.has_key('google') %}
+    <link rel="author" href="{{site.configs.google}}"/>
+    {% endif %}
+
+    <script src="/template/style/responsive-nav.min.js"></script>
+    <link rel="stylesheet" href="/template/style/main.css" type="text/css">
+    <link rel="stylesheet" href="/template/style/styles.css">
+    
+    {% block opengraph %}
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{site.title}}" >
+    <meta name="twitter:card" content="summary">
+    {% endblock %}
+    
+    {% block og_desc %}
+    <meta property="og:description" content="{{site.content}} " >
+    <meta name="twitter:description" content="{{site.content}} " >
+    {% endblock %}
+
+    {% if site.configs.has_key('twitter') %}
+    <meta name="twitter:site" content="@{{site.configs.twitter}}">
+    {% endif %}
+    <meta name="twitter:domain" content="{{site.configs.domain}}">
+    
+    <meta property="og:site_name" content="{{site.title}}">
+    <meta property="og:url" content="{{request.url}}">
+
+  </head>
+  <body>
+    
+    
+    {% include 'include/sidebar.html' %}
+
+    <div role="main" class="main">
+      <a href="#nav" class="nav-toggle"></a>
+      
+        <div class="content-wrap" {% block content_id %}{% endblock %}>
+        
+          <div class="content center-container">
+            {% block content %}
+            {% endblock %}
+          </div>
+        </div>
+
+        {% include 'include/footer.html' %}
+    </div>
+
+    
+    <script>
+      var navigation = responsiveNav("sidenav", {customToggle: ".nav-toggle"});
+      document.getElementById('sidebar').style.visibility="visible";
+    </script>
+  </body>
+</html>

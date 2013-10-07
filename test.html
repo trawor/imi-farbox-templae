@@ -1,0 +1,200 @@
+<!doctype html>
+<html xmlns:wb="http://open.weibo.com/wb" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="wb:webmaster" content="a68853a0a10931a0" />
+    
+    <title>{% block title %} {{site.title}} {% endblock %}</title>
+    <link rel="shortcut icon" href="/template/image/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Montserrat:400,700" type="text/css">
+    
+    <link rel="stylesheet" href="/template/style/main.css" type="text/css">
+    {% if site.configs.has_key('google') %}
+    <link rel="author" href="{{site.configs.google}}"/>
+    {% endif %}
+
+
+    <link rel="stylesheet" href="/template/style/main.css" type="text/css">
+    <link rel="stylesheet" href="/template/style/styles.css">
+    <script src="/template/style/responsive-nav.min.js"></script>
+
+
+    {% block opengraph %}
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{site.title}}" >
+    <meta name="twitter:card" content="summary">
+    {% endblock %}
+    
+    {% block og_desc %}
+    <meta property="og:description" content="{{site.content}} " >
+    <meta name="twitter:description" content="{{site.content}} " >
+    {% endblock %}
+
+    {% if site.configs.has_key('twitter') %}
+    <meta name="twitter:site" content="@{{site.configs.twitter}}">
+    {% endif %}
+    <meta name="twitter:domain" content="{{site.configs.domain}}">
+    
+    <meta property="og:site_name" content="{{site.title}}">
+    <meta property="og:url" content="{{request.url}}">
+
+<style type="text/css">
+  #left-area{
+    float: left;
+width: 720px;
+margin-right: 80px;
+  }
+
+#sidebar{
+  width: 320px;
+float: left;
+}
+</style>
+  </head>
+  <body {% if is_mobile() == False and site.configs.bg %}style="background-image:url({{site.configs.bg}})" {% endif %}>
+    <div class="container">
+    
+  <div id="content" class="clearfix">
+    <div id="left-area">
+              <article class="entry-post clearfix">
+
+  <div class="post-thumbnail">
+    <img src="http://cdn.elegantthemes.com/preview/Foxy/wp-content/uploads/2009/08/post_1-720x320.jpg" alt="Blog Post Title Here" width="720" height="320">
+    <div class="post-description">
+          <div class="testimonial-author">
+        <span class="et-avatar"><img alt="" src="http://0.gravatar.com/avatar/ef09d2d2b898eac1a333d4c1264b123f?s=62&amp;d=&amp;r=G" class="avatar avatar-62 photo" height="62" width="62"></span>
+      </div> <!-- .testimonial-author -->
+          <h2><a href="http://elegantthemes.com/preview/Foxy/nam-libero-tempore-cum-soluta-nobis-est-2/">Blog Post Title Here</a></h2>
+    </div> <!-- .post-description -->
+  </div> <!-- .post-thumbnail -->
+
+<p class="meta-info"> By <a href="http://elegantthemes.com/preview/Foxy/author/admin/" title="Posts by admin" rel="author">admin</a> on Aug 17, 2009 in <a href="http://elegantthemes.com/preview/Foxy/category/news/" title="View all posts in Recent News" rel="category tag">Recent News</a> | <span class="comments-number"><a href="http://elegantthemes.com/preview/Foxy/nam-libero-tempore-cum-soluta-nobis-est-2/#respond">13 comments</a></span></p> <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat fac ere possimus, omnis voluptas assum enda est, omnis dolor repel lendus. Tem poribus autem quibusdam et aut officiis debitis aut rerum tatibus saepe even utetvoluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente...</p>
+
+  <a href="http://elegantthemes.com/preview/Foxy/nam-libero-tempore-cum-soluta-nobis-est-2/" class="read-more">Read More</a>
+
+</article> <!-- .entry-post -->             <article class="entry-post clearfix">
+
+  <div class="post-thumbnail">
+    <img src="http://cdn.elegantthemes.com/preview/Foxy/wp-content/uploads/2009/08/post_6-720x320.jpg" alt="These Are Updates" width="720" height="320">
+    <div class="post-description">
+          <div class="testimonial-author">
+        <span class="et-avatar"><img alt="" src="http://0.gravatar.com/avatar/ef09d2d2b898eac1a333d4c1264b123f?s=62&amp;d=&amp;r=G" class="avatar avatar-62 photo" height="62" width="62"></span>
+      </div> <!-- .testimonial-author -->
+          <h2><a href="http://elegantthemes.com/preview/Foxy/sed-neque-ipsum-pulvinar-eu-tristique/">These Are Updates</a></h2>
+    </div> <!-- .post-description -->
+  </div> <!-- .post-thumbnail -->
+
+<p class="meta-info"> By <a href="http://elegantthemes.com/preview/Foxy/author/admin/" title="Posts by admin" rel="author">admin</a> on Aug 16, 2009 in <a href="http://elegantthemes.com/preview/Foxy/category/news/" title="View all posts in Recent News" rel="category tag">Recent News</a> | <span class="comments-number"><a href="http://elegantthemes.com/preview/Foxy/sed-neque-ipsum-pulvinar-eu-tristique/#respond">8 comments</a></span></p>  <p>Morbi condimentum tempus tincidunt. Sed neque ipsum, pulvinar eu tristique sollicitudin, tincidunt at nisi. Aenean feugiat risus sed lacus aliquam et adi piscing elit sodales. Aenean in erat sed neque convallis convallis at eu metus. In varius lacus quis diam cursus posuere. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis...</p>
+
+  <a href="http://elegantthemes.com/preview/Foxy/sed-neque-ipsum-pulvinar-eu-tristique/" class="read-more">Read More</a>
+
+</article> <!-- .entry-post -->             <article class="entry-post clearfix">
+
+  <div class="post-thumbnail">
+    <img src="http://cdn.elegantthemes.com/preview/Foxy/wp-content/uploads/2009/08/post_4-720x320.jpg" alt="This Is What’s Happening" width="720" height="320">
+    <div class="post-description">
+          <div class="testimonial-author">
+        <span class="et-avatar"><img alt="" src="http://0.gravatar.com/avatar/ef09d2d2b898eac1a333d4c1264b123f?s=62&amp;d=&amp;r=G" class="avatar avatar-62 photo" height="62" width="62"></span>
+      </div> <!-- .testimonial-author -->
+          <h2><a href="http://elegantthemes.com/preview/Foxy/cras-eu-eros-id-dui-porttitor-luctus/">This Is What’s Happening</a></h2>
+    </div> <!-- .post-description -->
+  </div> <!-- .post-thumbnail -->
+
+<p class="meta-info"> By <a href="http://elegantthemes.com/preview/Foxy/author/admin/" title="Posts by admin" rel="author">admin</a> on Aug 16, 2009 in <a href="http://elegantthemes.com/preview/Foxy/category/news/" title="View all posts in Recent News" rel="category tag">Recent News</a> | <span class="comments-number"><a href="http://elegantthemes.com/preview/Foxy/cras-eu-eros-id-dui-porttitor-luctus/#respond">6 comments</a></span></p> <p>In dolor odio, faucibus at pellentesque ornare, pretium nec diam. Aliquam erat volutpat. Proin vitae sapien et ante convallis hendrerit eu non enim. Nullam elementum fringilla ultricies. Praesent urna est, vulputate non condimentum ac, euismod vitae lacus. Quisque et mi velit, vitae posuere tortor. Sed vel augue ante, hendrerit tristique enim. Donec ipsum diam,...</p>
+
+  <a href="http://elegantthemes.com/preview/Foxy/cras-eu-eros-id-dui-porttitor-luctus/" class="read-more">Read More</a>
+
+</article> <!-- .entry-post -->             <article class="entry-post clearfix">
+
+  <div class="post-thumbnail">
+    <img src="http://cdn.elegantthemes.com/preview/Foxy/wp-content/uploads/2009/08/post_2-720x320.jpg" alt="Vivamus vitae nibh id" width="720" height="320">
+    <div class="post-description">
+          <div class="testimonial-author">
+        <span class="et-avatar"><img alt="" src="http://0.gravatar.com/avatar/ef09d2d2b898eac1a333d4c1264b123f?s=62&amp;d=&amp;r=G" class="avatar avatar-62 photo" height="62" width="62"></span>
+      </div> <!-- .testimonial-author -->
+          <h2><a href="http://elegantthemes.com/preview/Foxy/vivamus-vitae-nibh-id-quam-convallis-blandit/">Vivamus vitae nibh id</a></h2>
+    </div> <!-- .post-description -->
+  </div> <!-- .post-thumbnail -->
+
+<p class="meta-info"> By <a href="http://elegantthemes.com/preview/Foxy/author/admin/" title="Posts by admin" rel="author">admin</a> on Aug 16, 2009 in <a href="http://elegantthemes.com/preview/Foxy/category/news/" title="View all posts in Recent News" rel="category tag">Recent News</a> | <span class="comments-number"><a href="http://elegantthemes.com/preview/Foxy/vivamus-vitae-nibh-id-quam-convallis-blandit/#respond">5 comments</a></span></p> <p>Pellentesque et ante at dui condimentum venenatis nec eu quam. Ut consequat orci ut mi luctus eget luctus est viverra. Praesent semper, urna at vehicula pharetra, sapien nibh faucibus ligula, quis fermentum urna elit adipiscing libero. Vestibulum et congue augue. Etiam nec tellus augue, at rhoncus leo. Suspendisse ligula risus, accumsan at pellentesque ac, cursus...</p>
+
+  <a href="http://elegantthemes.com/preview/Foxy/vivamus-vitae-nibh-id-quam-convallis-blandit/" class="read-more">Read More</a>
+
+</article> <!-- .entry-post -->             <article class="entry-post clearfix">
+
+  <div class="post-thumbnail">
+    <img src="http://cdn.elegantthemes.com/preview/Foxy/wp-content/uploads/2009/08/post_3-720x320.jpg" alt="Aenean vulputate ferm" width="720" height="320">
+    <div class="post-description">
+          <div class="testimonial-author">
+        <span class="et-avatar"><img alt="" src="http://0.gravatar.com/avatar/ef09d2d2b898eac1a333d4c1264b123f?s=62&amp;d=&amp;r=G" class="avatar avatar-62 photo" height="62" width="62"></span>
+      </div> <!-- .testimonial-author -->
+          <h2><a href="http://elegantthemes.com/preview/Foxy/aenean-vulputate-fermentum-ante-rhoncus-pulvinar/">Aenean vulputate ferm</a></h2>
+    </div> <!-- .post-description -->
+  </div> <!-- .post-thumbnail -->
+
+<p class="meta-info"> By <a href="http://elegantthemes.com/preview/Foxy/author/admin/" title="Posts by admin" rel="author">admin</a> on Aug 16, 2009 in <a href="http://elegantthemes.com/preview/Foxy/category/news/" title="View all posts in Recent News" rel="category tag">Recent News</a> | <span class="comments-number"><a href="http://elegantthemes.com/preview/Foxy/aenean-vulputate-fermentum-ante-rhoncus-pulvinar/#respond">6 comments</a></span></p> <p>Phasellus mauris elit, porta a placerat eget, lobortis vel ipsum. Maecenas at ligula in risus lacinia consequat. Vivamus massa lorem, volutpat id viverra ut, tincidunt vel augue. Aenean vulputate fermentum ante rhoncus pulvinar. Vivamus vitae nibh id quam convallis blandit. Pellentesque nec neque tortor, eget volutpat magna. Aenean at consectetur risus. Mauris...</p>
+
+  <a href="http://elegantthemes.com/preview/Foxy/aenean-vulputate-fermentum-ante-rhoncus-pulvinar/" class="read-more">Read More</a>
+
+</article> <!-- .entry-post -->             <article class="entry-post clearfix">
+
+  <div class="post-thumbnail">
+    <img src="http://cdn.elegantthemes.com/preview/Foxy/wp-content/uploads/2009/08/post_5-720x320.jpg" alt="Ut sagittis ultrices urna" width="720" height="320">
+    <div class="post-description">
+          <div class="testimonial-author">
+        <span class="et-avatar"><img alt="" src="http://0.gravatar.com/avatar/ef09d2d2b898eac1a333d4c1264b123f?s=62&amp;d=&amp;r=G" class="avatar avatar-62 photo" height="62" width="62"></span>
+      </div> <!-- .testimonial-author -->
+          <h2><a href="http://elegantthemes.com/preview/Foxy/ut-sagittis-ultrices-urna-eget-erat-non-purus-varius/">Ut sagittis ultrices urna</a></h2>
+    </div> <!-- .post-description -->
+  </div> <!-- .post-thumbnail -->
+
+<p class="meta-info"> By <a href="http://elegantthemes.com/preview/Foxy/author/admin/" title="Posts by admin" rel="author">admin</a> on Sep 5, 2008 in <a href="http://elegantthemes.com/preview/Foxy/category/news/" title="View all posts in Recent News" rel="category tag">Recent News</a> | <span class="comments-number"><a href="http://elegantthemes.com/preview/Foxy/ut-sagittis-ultrices-urna-eget-erat-non-purus-varius/#respond">23 comments</a></span></p> <p>Sed tempor lectus in risus. Nullam vestibulum, odio ac pulvinar condimentum, urna neque aliquet ipsum, in blandit velit nunc eget mauris. Suspendisse aliquet sem ut nulla. Cras mollis ornare nisl. Morbi ac mi. Nunc eget nisi. Donec at enim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed diam. Ut sagittis ultrices...</p>
+
+  <a href="http://elegantthemes.com/preview/Foxy/ut-sagittis-ultrices-urna-eget-erat-non-purus-varius/" class="read-more">Read More</a>
+
+</article> <!-- .entry-post -->     <div class="wp-pagenavi">
+<span class="pages">Page 1 of 2</span><span class="current">1</span><a href="http://elegantthemes.com/preview/Foxy/category/news/page/2/" class="page larger">2</a><a href="http://elegantthemes.com/preview/Foxy/category/news/page/2/" class="nextpostslink">»</a>
+</div>    </div> <!-- #left-area -->
+
+      <div id="sidebar">
+    <div id="shopping_cart-2" class="widget woocommerce widget_shopping_cart" style="display: none;"><h4 class="widgettitle">Cart</h4><div class="hide_cart_widget_if_empty"><div class="widget_shopping_cart_content">
+
+<ul class="cart_list product_list_widget ">
+
+  
+    <li class="empty">No products in the cart.</li>
+
+  
+</ul><!-- end product list -->
+
+
+</div></div></div> <!-- end .widget -->   <div id="recent-posts-2" class="widget widget_recent_entries">    <h4 class="widgettitle">Recent Posts</h4>   <ul>
+          <li>
+        <a href="http://elegantthemes.com/preview/Foxy/nam-libero-tempore-cum-soluta-nobis-est-2/" title="Blog Post Title Here">Blog Post Title Here</a>
+            </li>
+          <li>
+        <a href="http://elegantthemes.com/preview/Foxy/sed-neque-ipsum-pulvinar-eu-tristique/" title="These Are Updates">These Are Updates</a>
+            </li>
+          <li>
+        <a href="http://elegantthemes.com/preview/Foxy/cras-eu-eros-id-dui-porttitor-luctus/" title="This Is What’s Happening">This Is What’s Happening</a>
+            </li>
+          <li>
+        <a href="http://elegantthemes.com/preview/Foxy/vivamus-vitae-nibh-id-quam-convallis-blandit/" title="Vivamus vitae nibh id">Vivamus vitae nibh id</a>
+            </li>
+          <li>
+        <a href="http://elegantthemes.com/preview/Foxy/aenean-vulputate-fermentum-ante-rhoncus-pulvinar/" title="Aenean vulputate ferm">Aenean vulputate ferm</a>
+            </li>
+        </ul>
+    </div> <!-- end .widget --><div id="recent-comments-2" class="widget widget_recent_comments"><h4 class="widgettitle">Recent Comments</h4><ul id="recentcomments"><li class="recentcomments">admin on <a href="http://elegantthemes.com/preview/Foxy/product/nimble-theme/#comment-445">Nimble Theme</a></li><li class="recentcomments">admin on <a href="http://elegantthemes.com/preview/Foxy/product/instyle-theme/#comment-444">InStyle Theme</a></li><li class="recentcomments">admin on <a href="http://elegantthemes.com/preview/Foxy/product/origin-theme/#comment-443">Origin Theme</a></li><li class="recentcomments">admin on <a href="http://elegantthemes.com/preview/Foxy/product/styleshop-theme/#comment-442">StyleShop THeme</a></li><li class="recentcomments">admin on <a href="http://elegantthemes.com/preview/Foxy/product/fusion-theme/#comment-441">Fusion Theme</a></li></ul></div> <!-- end .widget --><div id="meta-2" class="widget widget_meta"><h4 class="widgettitle">Meta</h4>     <ul>
+            <li><a href="http://elegantthemes.com/preview/Foxy/wp-login.php">Log in</a></li>
+      <li><a href="http://elegantthemes.com/preview/Foxy/feed/" title="Syndicate this site using RSS 2.0">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+      <li><a href="http://elegantthemes.com/preview/Foxy/comments/feed/" title="The latest comments to all posts in RSS">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+      <li><a href="http://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a></li>            </ul>
+</div> <!-- end .widget --> </div> <!-- end #sidebar -->
+  </div> <!-- #content -->
+
+    </div>
+
+  </body>
+</html>

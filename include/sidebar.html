@@ -1,0 +1,96 @@
+<div class="sidebar" id="sidebar">
+
+        <div role="navigation" id="sidenav" class="nav-collapse">
+          <a  href="/"><h4 class="sitetitle">{{site.title}}</h4></a>
+          <ul>
+              
+              <li>
+              <a href="/archive" {% if request.path == '/archive' %}class="current"{% endif %}>archive</a>
+              </li>
+              
+              {% if has('about.md') %}
+              <li>
+                  <a  rel="author" href="/pages/about" {% if request.path == '/pages/about' %}class="current"{% endif %}>about</a>
+              </li>
+              {% endif %}
+
+
+              {% if has('links.md') %}
+              <li>
+                  <a href="/pages/links" {% if request.path == '/pages/links' %}class="current"{% endif %}>links</a>
+              </li>
+              {% endif %}
+
+              <li><a href="/feed">rss</a></li>
+
+              
+          </ul>
+
+
+           <div class="weibo">
+              {% if site.configs.has_key('avatar') %}
+              {% if site.configs.has_key('weibo') %}
+                  <img class="avatar" src="{{site.configs['avatar']}}" />
+              {% endif %}
+              {% endif %}
+
+              
+          </div>
+
+          
+          <div class="s-list">
+              {% if site.configs.has_key('weibo') %}
+                  <a href="http://weibo.com/{{site.configs.weibo}}" target="_blank"><img src="/template/image/weibo.png" /></a>
+              {% endif %}
+
+              {% if site.configs.has_key('twitter') %}
+                  <a href="https://twitter.com/{{site.configs.twitter}}" target="_blank"><img src="/template/image/twitter.png" /></a>
+              {% endif %}
+
+              {% if site.configs.has_key('facebook') %}
+                  <a href="https://facebook.com/{{site.configs.facebook}}" target="_blank"><img src="/template/image/facebook.png" /></a>
+              {% endif %}
+
+              {% if site.configs.has_key('instagram') %}
+                  <a href="http://instagram.com/{{site.configs.instagram}}" target="_blank"><img src="/template/image/instagram.png" /></a>
+              {% endif %}
+
+              {% if site.configs.has_key('google') %}
+                  <a href="{{site.configs.google}}" target="_blank"><img src="/template/image/google.png" /></a>
+              {% endif %}
+
+              {% if site.configs.has_key('github') %}
+                  <a href="https://github.com/{{site.configs.github}}" target="_blank"><img src="/template/image/github.png" /></a>
+              {% endif %}
+          </div>
+
+        </div>
+        <div class="side-more" style="margin-top:60px">
+            <div>
+              {% if request.args.has_key('s') %}
+                {% set s=request.args['s'] %}
+              {% else %}
+                {% set s='搜索' %}
+              {% endif %}
+                <input type="text" id="search_value" placeholder="{{s}}" onkeyup="if (event.keyCode == 13) search();">
+                
+                <script type="text/javascript">
+                  function search(){
+                    if (document.getElementById('search_value').value){
+                        location.href='http://'+location.host+'?s='+document.getElementById('search_value').value
+                    }else{return false;}}
+                </script>
+            </div>
+
+
+            <ul class="tags" style="margin:30px 0px 130px 30px;list-style: none;display: block;" >
+            {% for tag,count in site.tags %}
+              {% if count > 1 %}
+              <li style="float:left; margin:5px 5px 5px 0px; "><a  href="/tags/{{tag}}">{{tag}}</a></li>
+              {% endif %}
+            {% endfor %}
+            </ul>
+        </div>
+
+</div>
+

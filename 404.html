@@ -1,0 +1,33 @@
+{% set post = get_data(type='post',url_path=request.path, limit=1,with_page=False) %}
+{% if post %}
+
+    {{ redirect('/post'+request.path) }}
+
+{% else %}
+    {% extends 'base.html' %}
+    {% block title %}404 {{ site.title }}{% endblock %}
+
+    {% block content %}
+    <div class="post-body">
+            
+        <h1>404:</h1>
+        <br/>
+        <p>那谁家内小谁, 又丢啦? 哎... 这孩子,每次搬家就乱跑~~</p>
+        <br/>
+
+        咱先<a href="/">回家</a>吧?
+
+        
+
+        <br/><br/>
+        <h2>或者:</h2>
+        <br/>
+        <p>{% if site.configs.has_key('weibo') %}去<a href="http://weibo.com/{{site.configs.weibo}}">微博上</a>再找找?, 要不{% endif %}干脆翻个<a href="/archive">底朝天</a>!</p> 
+
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+
+    </div>
+
+    {% endblock %}
+{% endif %}

@@ -1,0 +1,30 @@
+{% for post in posts %}
+{% if post.metadata.has_key('type') and post.metadata['type'] == 'refer'%}
+<div class="post ref-post">
+  <h2 class="title"><a target="_blank" href="{{ post.metadata['refer_url'] }}">{{ post.title }}</a><span> →</span>{% if post.metadata.has_key('refer_domain') %}<span class="source">({{ post.metadata['refer_domain'] }})</span>{% endif %}</h2>
+  <span class="date">{{ post.date | date('%B %d, %Y') }}</span>
+  <div class="comment-body">
+    {{ post | auto_content }}
+  </div>
+</div>
+{% else %}
+<div class="post link-title-post">
+  <h2 class="title"><a href="{{post.url}}">{{ post.title }}</a>  </h2>
+  
+  <div class="post-body">
+    {% if post.metadata.has_key('abstract') %}
+    {{ post.metadata['abstract'] }}
+    {% else %}
+    {{ post.content | limit(100) }}
+    {% endif %}
+  </div>
+
+  <div class="post-foot">
+    <small><span class="date">{{ post.date | date('%m-%d, %Y') }}</span></small>
+  </div>
+
+</div>
+{% endif %}
+{% endfor %}
+
+{% include 'include/paginator.html' %}

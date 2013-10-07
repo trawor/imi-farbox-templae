@@ -1,0 +1,78 @@
+{% if post %}
+
+
+{% extends 'base.html' %}
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block opengraph %}
+  <meta name="twitter:title" content="{{post.title}}" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="{{post.title}}" />
+
+  {% if post.cover %}
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image:src" content="{{post.cover}}" />
+  <meta property="og:image" content="{{post.cover}}" />
+
+  {% else %}
+  <meta name="twitter:card" content="summary">
+  {% endif %}
+
+{% endblock %}
+
+
+{% block og_desc %}
+  {% if post.metadata.has_key('abstract') %}
+    <meta name="twitter:description" content="{{ post.metadata['abstract'] }}" />
+    <meta property="og:description" content="{{ post.metadata['abstract'] }}" />
+  {% else %}
+    <meta property="og:description" content="{{site.content}} " >
+    <meta name="twitter:description" content="{{site.content}} " >
+  {% endif %}
+{% endblock %}
+
+
+{% block content_id %}id="content-start"{% endblock %}
+
+{% block content %}
+
+<div class="post normal-post">
+
+  <h2 class="title">
+    {% if post.metadata.has_key('type') and post.metadata['type'] == 'refer' %}
+    <a class="refer-title" href="{{ post.metadata['refer_url'] }}" target="_blank">{{ post.title }}</a>
+    {% else %}
+    {{ post.title }}
+    {% endif %}
+    <a title="permanent link" class="perman-link" href="{{post.url}}#content-start">∞</a> </h2>
+  
+  
+  <p class="tags">
+  <br/> 
+  <span class="date">{{ post.date | date('%m-%d, %Y') }}</span>
+  {% if post.tags %} {% set firstTag=post.tags[0] %}
+  {% for tag in post.tags %}
+  <a href="/tags/{{ tag }}">{{ tag }}</a>
+  {% endfor %}
+  {% endif %} 
+
+  </p>
+
+  <div class="post-body">
+    {{ post | auto_content }}
+  </div>
+
+  <p class="eof">· EOF ·</p>
+  
+</div>
+{{ get_text_file('comment_js').raw_content }}
+
+{% endblock %}
+
+    
+
+{% else %}
+
+{{ redirect('/error/404.html')}}
+
+{% endif %}
