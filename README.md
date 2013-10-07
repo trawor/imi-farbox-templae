@@ -1,5 +1,12 @@
-这是我的博客 [imi.im](http://imi.im) 的模板
+## 这是我的博客 [imi.im](http://imi.im) 的模板
 
+效果如下:
+
+![image](http://ww3.sinaimg.cn/large/61e7e532jw1e9crvs2ifsj20u10o0n0t.jpg)
+
+支持手机响应式:
+
+![image](http://ww4.sinaimg.cn/mw690/61e7e532jw1e9creku2p1j20at0lujt1.jpg)
 
 ---
 附上`site.txt`
